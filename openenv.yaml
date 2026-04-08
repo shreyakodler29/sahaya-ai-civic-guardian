@@ -1,0 +1,26 @@
+name: sahaya-ai-civic-guardian
+version: 1.0.0
+description: "AI-driven protection of public assets using YOLOv8 and civic intelligence."
+
+entrypoint: python3 inference.py
+
+tasks:
+  - id: damage_detection
+    difficulty: easy
+    description: Detect vandalism or asset misuse
+    grader:
+      type: accuracy
+      threshold: 0.7
+
+  - id: maintenance_prediction
+    difficulty: medium
+    description: Predict infrastructure failure
+    grader:
+      type: regression
+      metric: rmse
+
+  - id: integrity_scoring
+    difficulty: hard
+    description: Civic Integrity Index
+    grader:
+      type: custom
